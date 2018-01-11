@@ -6,6 +6,8 @@
  */
 package progra_taller.rnegocio.entidades;
 
+import java.util.Date;
+
 /**
  *
  * @author flavi
