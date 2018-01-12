@@ -7,8 +7,8 @@ package progra_taller.rnegocio.Imp;
 
 /**
  *
- * @author Usuario
+ * @author Familia_Carrasco
  */
-public class NO_sirve {
+public class UsuariosImpl {
     
 }

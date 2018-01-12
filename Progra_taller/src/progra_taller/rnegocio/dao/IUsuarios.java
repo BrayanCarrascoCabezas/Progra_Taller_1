@@ -7,8 +7,8 @@ package progra_taller.rnegocio.dao;
 
 /**
  *
- * @author Usuario
+ * @author Familia_Carrasco
  */
-public class No_srive {
+public interface IUsuarios {
     
 }

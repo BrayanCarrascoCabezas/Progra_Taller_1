@@ -1,20 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package progra_taller.rnegocio.entidades;
-
 import java.util.Date;
-
-/**
- *
- * @author flavi
- */
 public class Publicaciones {
     private int idpublicaciones;
-    private int usuario_id;
-    private int nivel_id;
+    private Usuarios usuarios;
+    private Niveles niveles;
     private String titulo;
     private String contenido;
     private int publicado;
@@ -26,10 +15,10 @@ public class Publicaciones {
     public Publicaciones() {
     }
 
-    public Publicaciones(int idpublicaciones, int usuario_id, int nivel_id, String titulo, String contenido, int publicado, int vistas, Double votos, Date creado, Date actualizado) {
+    public Publicaciones(int idpublicaciones, Usuarios usuarios, Niveles niveles, String titulo, String contenido, int publicado, int vistas, Double votos, Date creado, Date actualizado) {
         this.idpublicaciones = idpublicaciones;
-        this.usuario_id = usuario_id;
-        this.nivel_id = nivel_id;
+        this.usuarios = usuarios;
+        this.niveles = niveles;
         this.titulo = titulo;
         this.contenido = contenido;
         this.publicado = publicado;
@@ -39,28 +28,28 @@ public class Publicaciones {
         this.actualizado = actualizado;
     }
 
+    public Usuarios getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(Usuarios usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public Niveles getNiveles() {
+        return niveles;
+    }
+
+    public void setNiveles(Niveles niveles) {
+        this.niveles = niveles;
+    }
+
     public int getIdpublicaciones() {
         return idpublicaciones;
     }
 
     public void setIdpublicaciones(int idpublicaciones) {
         this.idpublicaciones = idpublicaciones;
-    }
-
-    public int getUsuario_id() {
-        return usuario_id;
-    }
-
-    public void setUsuario_id(int usuario_id) {
-        this.usuario_id = usuario_id;
-    }
-
-    public int getNivel_id() {
-        return nivel_id;
-    }
-
-    public void setNivel_id(int nivel_id) {
-        this.nivel_id = nivel_id;
     }
 
     public String getTitulo() {
@@ -118,7 +107,6 @@ public class Publicaciones {
     public void setActualizado(Date actualizado) {
         this.actualizado = actualizado;
     }
-    
-    
+
     
 }

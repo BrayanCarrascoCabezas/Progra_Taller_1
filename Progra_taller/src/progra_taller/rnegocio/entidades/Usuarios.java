@@ -1,37 +1,36 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package progra_taller.rnegocio.entidades;
 
 import java.util.Date;
 
-/**
- *
- * @author Usuario
- */
 public class Usuarios {
-   
-  private  int idusuario;
-  private String nombre;
- private   String email;
-   private String password;
+
+    private int idusuario;
+    private String nombre;
+    private String email;
+    private String password;
     private Date creado;
-     private Date actualizado;
-     private int rol_id;
+    private Date actualizado;
+    private Roles roles;
 
     public Usuarios() {
     }
 
-    public Usuarios(int idusuario, String nombre, String email, String password, Date creado, Date actualizado, int rol_id) {
+    public Usuarios(int idusuario, String nombre, String email, String password, Date creado, Date actualizado, Roles roles) {
         this.idusuario = idusuario;
         this.nombre = nombre;
         this.email = email;
         this.password = password;
         this.creado = creado;
         this.actualizado = actualizado;
-        this.rol_id = rol_id;
+        this.roles = roles;
+    }
+
+    public Roles getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Roles roles) {
+        this.roles = roles;
     }
 
     public int getIdusuario() {
@@ -82,12 +81,4 @@ public class Usuarios {
         this.actualizado = actualizado;
     }
 
-    public int getRol_id() {
-        return rol_id;
-    }
-
-    public void setRol_id(int rol_id) {
-        this.rol_id = rol_id;
-    }
-   
 }
