@@ -1,16 +1,16 @@
 package progra_taller.rnegocio.entidades;
 import java.util.Date;
-public class Niveles {
-    private int idniveles;
+public class Nivel {
+    private int idnivel;
     private String nombre;
     private Date creado;
     private Date actualizado;
 
-    public Niveles() {
+    public Nivel() {
     }
 
-    public Niveles(int idniveles, String nombre, Date creado, Date actualizado) {
-        this.idniveles = idniveles;
+    public Nivel(int idnivel, String nombre, Date creado, Date actualizado) {
+        this.idnivel = idnivel;
         this.nombre = nombre;
         this.creado = creado;
         this.actualizado = actualizado;
@@ -24,12 +24,12 @@ public class Niveles {
         this.actualizado = actualizado;
     }
 
-    public int getIdniveles() {
-        return idniveles;
+    public int getIdnivel() {
+        return idnivel;
     }
 
-    public void setIdniveles(int idniveles) {
-        this.idniveles = idniveles;
+    public void setIdnivel(int idnivel) {
+        this.idnivel = idnivel;
     }
 
     public String getNombre() {

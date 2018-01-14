@@ -1,9 +1,9 @@
 package progra_taller.rnegocio.entidades;
 import java.util.Date;
-public class Publicaciones {
-    private int idpublicaciones;
-    private Usuarios usuarios;
-    private Niveles niveles;
+public class Publicacion {
+    private int idpublicacion;
+    private Usuario usuario;
+    private Nivel nivel;
     private String titulo;
     private String contenido;
     private int publicado;
@@ -12,13 +12,13 @@ public class Publicaciones {
     private Date creado;
     private Date actualizado;
 
-    public Publicaciones() {
+    public Publicacion() {
     }
 
-    public Publicaciones(int idpublicaciones, Usuarios usuarios, Niveles niveles, String titulo, String contenido, int publicado, int vistas, Double votos, Date creado, Date actualizado) {
-        this.idpublicaciones = idpublicaciones;
-        this.usuarios = usuarios;
-        this.niveles = niveles;
+    public Publicacion(int idpublicacion, Usuario usuario, Nivel nivel, String titulo, String contenido, int publicado, int vistas, Double votos, Date creado, Date actualizado) {
+        this.idpublicacion = idpublicacion;
+        this.usuario = usuario;
+        this.nivel = nivel;
         this.titulo = titulo;
         this.contenido = contenido;
         this.publicado = publicado;
@@ -28,28 +28,28 @@ public class Publicaciones {
         this.actualizado = actualizado;
     }
 
-    public Usuarios getUsuarios() {
-        return usuarios;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUsuarios(Usuarios usuarios) {
-        this.usuarios = usuarios;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public Niveles getNiveles() {
-        return niveles;
+    public Nivel getNivel() {
+        return nivel;
     }
 
-    public void setNiveles(Niveles niveles) {
-        this.niveles = niveles;
+    public void setNivel(Nivel nivel) {
+        this.nivel = nivel;
     }
 
-    public int getIdpublicaciones() {
-        return idpublicaciones;
+    public int getIdpublicacion() {
+        return idpublicacion;
     }
 
-    public void setIdpublicaciones(int idpublicaciones) {
-        this.idpublicaciones = idpublicaciones;
+    public void setIdpublicacion(int idpublicacion) {
+        this.idpublicacion = idpublicacion;
     }
 
     public String getTitulo() {

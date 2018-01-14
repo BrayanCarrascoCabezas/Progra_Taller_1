@@ -1,27 +1,28 @@
 package progra_taller.rnegocio.entidades;
 import java.util.Date;
-public class Etiquetas {
-    private int idetiquetas;
-    private String nombre;
-    private Date creado;
-    private Date actualizado;
+public class Rol {
+  
+     private int idrol; 
+     private String nombre;
+     private Date creado;
+     private Date actualizado;
 
-    public Etiquetas() {
+    public Rol() {
     }
 
-    public Etiquetas(int idetiquetas, String nombre, Date creado, Date actualizado) {
-        this.idetiquetas = idetiquetas;
+    public Rol(int idrol, String nombre, Date creado, Date actualizado) {
+        this.idrol = idrol;
         this.nombre = nombre;
         this.creado = creado;
         this.actualizado = actualizado;
     }
 
-    public int getIdetiquetas() {
-        return idetiquetas;
+    public int getIdrol() {
+        return idrol;
     }
 
-    public void setIdetiquetas(int idetiquetas) {
-        this.idetiquetas = idetiquetas;
+    public void setIdrol(int idrol) {
+        this.idrol = idrol;
     }
 
     public String getNombre() {
@@ -48,6 +49,8 @@ public class Etiquetas {
         this.actualizado = actualizado;
     }
 
-    
-    
+     
+     
+     
+     
 }

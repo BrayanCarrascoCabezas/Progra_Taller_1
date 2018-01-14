@@ -2,21 +2,21 @@ package progra_taller.rnegocio.entidades;
 
 import java.util.*;
 
-public class Etiqueta_publicaciones {
+public class Etiqueta_publicacion {
 
     private int Id_Eti_pub;
-    private Etiquetas etiquetas;
-    private Publicaciones publicaciones;
+    private Etiqueta etiqueta;
+    private Publicacion publicacion;
     private Date Creado;
     private Date Actualizado;
 
-    public Etiqueta_publicaciones() {
+    public Etiqueta_publicacion() {
     }
 
-    public Etiqueta_publicaciones(int Id_Eti_pub, Etiquetas etiquetas, Publicaciones publicaciones, Date Creado, Date Actualizado) {
+    public Etiqueta_publicacion(int Id_Eti_pub, Etiqueta etiqueta, Publicacion publicacion, Date Creado, Date Actualizado) {
         this.Id_Eti_pub = Id_Eti_pub;
-        this.etiquetas = etiquetas;
-        this.publicaciones = publicaciones;
+        this.etiqueta = etiqueta;
+        this.publicacion = publicacion;
         this.Creado = Creado;
         this.Actualizado = Actualizado;
     }
@@ -37,20 +37,20 @@ public class Etiqueta_publicaciones {
         this.Id_Eti_pub = Id_Eti_pub;
     }
 
-    public Etiquetas getEtiquetas() {
-        return etiquetas;
+    public Etiqueta getEtiqueta() {
+        return etiqueta;
     }
 
-    public void setEtiquetas(Etiquetas etiquetas) {
-        this.etiquetas = etiquetas;
+    public void setEtiqueta(Etiqueta etiqueta) {
+        this.etiqueta = etiqueta;
     }
 
-    public Publicaciones getPublicaciones() {
-        return publicaciones;
+    public Publicacion getPublicacion() {
+        return publicacion;
     }
 
-    public void setPublicaciones(Publicaciones publicaciones) {
-        this.publicaciones = publicaciones;
+    public void setPublicacion(Publicacion publicacion) {
+        this.publicacion = publicacion;
     }
 
     public Date getCreado() {

@@ -2,7 +2,7 @@ package progra_taller.rnegocio.entidades;
 
 import java.util.Date;
 
-public class Usuarios {
+public class Usuario {
 
     private int idusuario;
     private String nombre;
@@ -10,27 +10,19 @@ public class Usuarios {
     private String password;
     private Date creado;
     private Date actualizado;
-    private Roles roles;
+    private Rol rol;
 
-    public Usuarios() {
+    public Usuario() {
     }
 
-    public Usuarios(int idusuario, String nombre, String email, String password, Date creado, Date actualizado, Roles roles) {
+    public Usuario(int idusuario, String nombre, String email, String password, Date creado, Date actualizado, Rol rol) {
         this.idusuario = idusuario;
         this.nombre = nombre;
         this.email = email;
         this.password = password;
         this.creado = creado;
         this.actualizado = actualizado;
-        this.roles = roles;
-    }
-
-    public Roles getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Roles roles) {
-        this.roles = roles;
+        this.rol = rol;
     }
 
     public int getIdusuario() {
@@ -81,4 +73,14 @@ public class Usuarios {
         this.actualizado = actualizado;
     }
 
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
+    
+
+    
 }
