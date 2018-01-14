@@ -4,8 +4,7 @@ import java.util.*;
 
 public class Etiqueta_publicacion {
 
-    private int Maldicion;
-    private int Id_Eti_pub;
+      private int Id_Eti_pub;
     private Etiqueta etiqueta;
     private Publicacion publicacion;
     private Date Creado;
