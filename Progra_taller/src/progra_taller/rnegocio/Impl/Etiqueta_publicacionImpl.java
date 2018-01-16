@@ -15,7 +15,7 @@ public class Etiqueta_publicacionImpl implements IEtiqueta_publicacion{
      @Override
     public int insertar(Etiqueta_publicacion etiqueta_publicacion) throws Exception{
         int numFilasAfectadas=0;
-        String sql="insert into etiqueta_publicacion values(?,?,?,?,?,?,?,?)";
+        String sql="insert into etiqueta_publicacion values(?,?,?,?,?)";
         List<Parametro> lstPar = new ArrayList<>();
         lstPar.add(new Parametro(1, etiqueta_publicacion.getId_Eti_pub()));
         lstPar.add(new Parametro(2, etiqueta_publicacion.getEtiqueta()));

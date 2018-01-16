@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package progra_taller.rnegocio.Impl;
-
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +15,7 @@ public class PublicacionImpl implements IPublicacion{
       @Override
     public int insertar(Publicacion publicacion) throws Exception{
         int numFilasAfectadas=0;
-          String sql = "insert into publicacion values(?,?,?,?)";
+          String sql = "insert into publicacion values(?,?,?,?,?,?,?,?,?,?)";
           List<Parametro> lstPar = new ArrayList<>();
           lstPar.add(new Parametro(1, publicacion.getIdpublicacion()));
           lstPar.add(new Parametro(2, publicacion.getUsuario()));
