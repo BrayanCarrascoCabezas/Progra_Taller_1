@@ -56,6 +56,8 @@ public class UsuarioImpl implements IUsuario{
                 Rol rol = roldao.obtener(rst.getInt(7));
                 usuario.setRol(rol);
                 lista.add(usuario);
+               
+                
            }
         }catch (Exception e) {
             throw e;
