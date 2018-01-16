@@ -5,7 +5,7 @@ import org.junit.Test;
 import progra_taller.rnegocio.Impl.UsuarioImpl;
 import progra_taller.rnegocio.dao.*;
 import progra_taller.rnegocio.entidades.*;
-import progra_taller.rnegocio.impl.*;
+import progra_taller.rnegocio.Impl.*;
 
 public class UsuarioTest {
     public UsuarioTest() {
