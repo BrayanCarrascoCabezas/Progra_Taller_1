@@ -19,7 +19,7 @@ public class Etiqueta_publicacionTest {
         Etiqueta etiqueta = etiquetaDao.obtener(1);
         IPublicacion publicacionDao = new PublicacionImpl();
         Publicacion publicacion = publicacionDao.obtener(1);
-        Etiqueta_publicacion etiqueta_publicacion = new Etiqueta_publicacion(1,etiqueta,publicacion,new Date(),new Date());
+        Etiqueta_publicacion etiqueta_publicacion = new Etiqueta_publicacion(2,etiqueta,publicacion,new Date(),new Date());
         
         try{
             filasAfectadas = etiqueta_publicacionDao.insertar(etiqueta_publicacion);
