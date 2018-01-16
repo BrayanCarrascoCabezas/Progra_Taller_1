@@ -56,7 +56,7 @@ public class Etiqueta_publicacionImpl implements IEtiqueta_publicacion{
                 Publicacion publicacion=publicaciondao.obtener(rst.getInt(3));
                 etiqueta_publicacion.setPublicacion(publicacion);
                 IEtiqueta etiquetadao=new EtiquetaImpl();
-                Etiqueta etiqueta=etiquetadao.obtener(2);
+                Etiqueta etiqueta=etiquetadao.obtener(rst.getInt(2));
                 etiqueta_publicacion.setEtiqueta(etiqueta);
                     lista.add(etiqueta_publicacion);
            }
