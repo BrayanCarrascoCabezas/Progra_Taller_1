@@ -75,6 +75,7 @@ public class EtiquetaImpl implements IEtiqueta{
                 etiqueta.setCreado(rst.getDate(3));
                 etiqueta.setActualizado(rst.getDate(4));
             }
+            
         }catch (Exception e) {
             throw e;
         }finally {
