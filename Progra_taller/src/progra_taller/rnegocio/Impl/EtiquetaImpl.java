@@ -18,6 +18,7 @@ public class EtiquetaImpl implements IEtiqueta{
         lstPar.add(new Parametro(3, etiqueta.getCreado()));
         lstPar.add(new Parametro(4, etiqueta.getActualizado()));
         Conexion con = null;
+        
         try{
             con = new Conexion();
             con.conectar();
