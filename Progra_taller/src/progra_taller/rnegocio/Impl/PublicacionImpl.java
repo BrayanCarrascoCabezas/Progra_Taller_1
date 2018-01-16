@@ -18,8 +18,8 @@ public class PublicacionImpl implements IPublicacion{
           String sql = "insert into publicacion values(?,?,?,?,?,?,?,?,?,?)";
           List<Parametro> lstPar = new ArrayList<>();
           lstPar.add(new Parametro(1, publicacion.getIdpublicacion()));
-          lstPar.add(new Parametro(2, publicacion.getUsuario()));
-          lstPar.add(new Parametro(3, publicacion.getNivel()));
+          lstPar.add(new Parametro(2, publicacion.getUsuario().getIdusuario()));
+          lstPar.add(new Parametro(3, publicacion.getNivel().getIdnivel()));
           lstPar.add(new Parametro(4, publicacion.getTitulo()));
           lstPar.add(new Parametro(5, publicacion.getContenido()));
           lstPar.add(new Parametro(6, publicacion.getPublicado()));
@@ -54,20 +54,19 @@ public class PublicacionImpl implements IPublicacion{
             while (rst.next()){
                 publicacion = new Publicacion();
                 publicacion.setIdpublicacion(rst.getInt(1));
+                IUsuario usuariodao = new UsuarioImpl();
+                Usuario usuario = usuariodao.obtener(rst.getInt(2));
+                publicacion.setUsuario(usuario);
+                INivel niveldao = new NivelImpl();
+                Nivel nivel = niveldao.obtener(rst.getInt(3));
+                publicacion.setNivel(nivel);
                 publicacion.setTitulo(rst.getString(4));
                 publicacion.setContenido(rst.getString(5));
                 publicacion.setPublicado(rst.getInt(6));
                 publicacion.setVistas(rst.getInt(7));
                 publicacion.setVotos(rst.getDouble(8));
                 publicacion.setCreado(rst.getDate(9));
-                 publicacion.setActualizado(rst.getDate(10));
-                 IUsuario usuariodao=new UsuarioImpl();
-                 Usuario usuario=usuariodao.obtener(2);
-                 publicacion.setUsuario(usuario);
-                 INivel niveldao=new NivelImpl();
-                 Nivel nivel=niveldao.obtener(3);
-                 publicacion.setUsuario(usuario);
-                 
+                publicacion.setActualizado(rst.getDate(10));
                 lista.add(publicacion);
            }
         }catch (Exception e) {
@@ -91,20 +90,20 @@ public class PublicacionImpl implements IPublicacion{
             ResultSet rst = con.ejecutaQuery(sql, lstPar);
             while (rst.next()){
                 publicacion = new Publicacion();
-  publicacion.setIdpublicacion(rst.getInt(1));
+                publicacion.setIdpublicacion(rst.getInt(1));
+                IUsuario usuariodao = new UsuarioImpl();
+                Usuario usuario = usuariodao.obtener(rst.getInt(2));
+                publicacion.setUsuario(usuario);
+                INivel niveldao = new NivelImpl();
+                Nivel nivel = niveldao.obtener(rst.getInt(3));
+                publicacion.setNivel(nivel);
                 publicacion.setTitulo(rst.getString(4));
                 publicacion.setContenido(rst.getString(5));
                 publicacion.setPublicado(rst.getInt(6));
                 publicacion.setVistas(rst.getInt(7));
                 publicacion.setVotos(rst.getDouble(8));
                 publicacion.setCreado(rst.getDate(9));
-                 publicacion.setActualizado(rst.getDate(10));
-                 IUsuario usuariodao=new UsuarioImpl();
-                 Usuario usuario=usuariodao.obtener(2);
-                 publicacion.setUsuario(usuario);
-                 INivel niveldao=new NivelImpl();
-                 Nivel nivel=niveldao.obtener(3);
-                 publicacion.setUsuario(usuario);
+                publicacion.setActualizado(rst.getDate(10));
             }
         }catch (Exception e) {
             throw e;

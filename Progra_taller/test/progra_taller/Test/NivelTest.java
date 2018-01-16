@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import progra_taller.rnegocio.dao.*;
 import progra_taller.rnegocio.entidades.*;
-import progra_taller.rnegocio.impl.*;
+import progra_taller.rnegocio.Impl.*;
 
 public class NivelTest {
     public NivelTest() {
@@ -14,7 +14,7 @@ public class NivelTest {
         //              INSERTAR
         int filasAfectadas =0;
         INivel nivelDao = new NivelImpl();
-        Nivel nivel = new Nivel(1,"Secundario",new Date(),new Date());
+        Nivel nivel = new Nivel(3,"Tercero",new Date(),new Date());
         try{
             filasAfectadas = nivelDao.insertar(nivel);
             System.out.println("Nivel ingresado!!!\n");

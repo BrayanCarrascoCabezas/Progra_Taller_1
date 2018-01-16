@@ -18,7 +18,7 @@ public class Etiqueta_publicacionImpl implements IEtiqueta_publicacion{
         String sql="insert into etiqueta_publicacion values(?,?,?,?,?)";
         List<Parametro> lstPar = new ArrayList<>();
         lstPar.add(new Parametro(1, etiqueta_publicacion.getId_Eti_pub()));
-        lstPar.add(new Parametro(2, etiqueta_publicacion.getEtiqueta()));
+        lstPar.add(new Parametro(2, etiqueta_publicacion.getEtiqueta().getIdetiqueta()));
         lstPar.add(new Parametro(3, etiqueta_publicacion.getPublicacion().getIdpublicacion()));
         lstPar.add(new Parametro(4, etiqueta_publicacion.getCreado()));
         lstPar.add(new Parametro(5, etiqueta_publicacion.getActualizado()));
@@ -50,14 +50,14 @@ public class Etiqueta_publicacionImpl implements IEtiqueta_publicacion{
             while (rst.next()){
                 etiqueta_publicacion = new Etiqueta_publicacion();
                 etiqueta_publicacion.setId_Eti_pub(rst.getInt(1));
+                IEtiqueta etiquetadao = new EtiquetaImpl();
+                Etiqueta etiqueta = etiquetadao.obtener(rst.getInt(2));
+                etiqueta_publicacion.setEtiqueta(etiqueta);
+                IPublicacion niveldao = new PublicacionImpl();
+                Publicacion nivel = niveldao.obtener(rst.getInt(3));
+                etiqueta_publicacion.setPublicacion(nivel);
                 etiqueta_publicacion.setCreado(rst.getDate(4));
                 etiqueta_publicacion.setActualizado(rst.getDate(5));
-                IPublicacion publicaciondao=new PublicacionImpl();
-                Publicacion publicacion=publicaciondao.obtener(rst.getInt(3));
-                etiqueta_publicacion.setPublicacion(publicacion);
-                IEtiqueta etiquetadao=new EtiquetaImpl();
-                Etiqueta etiqueta=etiquetadao.obtener(rst.getInt(2));
-                etiqueta_publicacion.setEtiqueta(etiqueta);
                     lista.add(etiqueta_publicacion);
            }
         }catch (Exception e) {
@@ -82,13 +82,14 @@ public class Etiqueta_publicacionImpl implements IEtiqueta_publicacion{
             while (rst.next()){
                 etiqueta_publicacion = new Etiqueta_publicacion();
                 etiqueta_publicacion.setId_Eti_pub(rst.getInt(1));
+                IEtiqueta etiquetadao = new EtiquetaImpl();
+                Etiqueta etiqueta = etiquetadao.obtener(rst.getInt(2));
+                etiqueta_publicacion.setEtiqueta(etiqueta);
+                IPublicacion niveldao = new PublicacionImpl();
+                Publicacion nivel = niveldao.obtener(rst.getInt(3));
+                etiqueta_publicacion.setPublicacion(nivel);
                 etiqueta_publicacion.setCreado(rst.getDate(4));
                 etiqueta_publicacion.setActualizado(rst.getDate(5));
-                IPublicacion publicaciondao=new PublicacionImpl();
-                Publicacion publicacion=publicaciondao.obtener(rst.getInt(3));
-                etiqueta_publicacion.setPublicacion(publicacion);
-                IEtiqueta etiquetadao=new EtiquetaImpl();
-                Etiqueta etiqueta=etiquetadao.obtener(2);
                 etiqueta_publicacion.setEtiqueta(etiqueta);
             }
         }catch (Exception e) {

@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import progra_taller.rnegocio.dao.*;
 import progra_taller.rnegocio.entidades.*;
-import progra_taller.rnegocio.impl.*;
+import progra_taller.rnegocio.Impl.*;
 
 public class RolTest {
     public RolTest() {
@@ -14,7 +14,7 @@ public class RolTest {
         //              INSERTAR
         int filasAfectadas =0;
         IRol rolDao = new RolImpl();
-        Rol rol = new Rol(2,"Administrador",new Date(),new Date());
+        Rol rol = new Rol(2,"Administrador2",new Date(),new Date());
         try{
             filasAfectadas = rolDao.insertar(rol);
             System.out.println("Rol ingresado!!!\n");

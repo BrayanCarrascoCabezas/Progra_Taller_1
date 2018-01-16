@@ -11,15 +11,15 @@ public class UsuarioImpl implements IUsuario{
     @Override
     public int insertar(Usuario usuario) throws Exception{
         int numFilasAfectadas=0;
-        String sql="insert into usuario values(?,?,?,?,?,?,?,?)";
+        String sql="insert into usuario values(?,?,?,?,?,?,?)";
         List<Parametro> lstPar = new ArrayList<>();
         lstPar.add(new Parametro(1, usuario.getIdusuario()));
         lstPar.add(new Parametro(2, usuario.getNombre()));
-        lstPar.add(new Parametro(4, usuario.getEmail()));
-        lstPar.add(new Parametro(5, usuario.getPassword()));
+        lstPar.add(new Parametro(3, usuario.getEmail()));
+        lstPar.add(new Parametro(4, usuario.getPassword()));
         lstPar.add(new Parametro(6, usuario.getCreado()));
         lstPar.add(new Parametro(7, usuario.getActualizado()));
-        lstPar.add(new Parametro(8, usuario.getRol().getIdrol()));
+        lstPar.add(new Parametro(5, usuario.getRol().getIdrol()));
         Conexion con = null;
         try{
             con = new Conexion();
@@ -50,10 +50,10 @@ public class UsuarioImpl implements IUsuario{
                 usuario.setNombre(rst.getString(2));
                 usuario.setEmail(rst.getString(3));
                 usuario.setPassword(rst.getString(4));
-                usuario.setCreado(rst.getDate(5));
-                usuario.setActualizado(rst.getDate(6));
+                usuario.setCreado(rst.getDate(6));
+                usuario.setActualizado(rst.getDate(7));
                 IRol roldao = new RolImpl();
-                Rol rol = roldao.obtener(rst.getInt(7));
+                Rol rol = roldao.obtener(rst.getInt(5));
                 usuario.setRol(rol);
                 lista.add(usuario);
                
@@ -84,10 +84,10 @@ public class UsuarioImpl implements IUsuario{
                 usuario.setNombre(rst.getString(2));
                 usuario.setEmail(rst.getString(3));
                 usuario.setPassword(rst.getString(4));
-                usuario.setCreado(rst.getDate(5));
-                usuario.setActualizado(rst.getDate(6));
+                usuario.setCreado(rst.getDate(6));
+                usuario.setActualizado(rst.getDate(7));
                 IRol roldao = new RolImpl();
-                Rol rol = roldao.obtener(rst.getInt(7));
+                Rol rol = roldao.obtener(rst.getInt(5));
                 usuario.setRol(rol);
             }
         }catch (Exception e) {

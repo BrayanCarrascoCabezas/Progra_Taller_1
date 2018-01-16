@@ -16,8 +16,8 @@ public class UsuarioTest {
         int filasAfectadas =0;
         IUsuario usuarioDao = new UsuarioImpl();
         IRol rolDao = new RolImpl();
-        Rol rol = rolDao.obtener(1);
-        Usuario usuario = new Usuario(1,"nombre","email","password",new Date(),new Date(),rol);
+        Rol rol = rolDao.obtener(2);
+        Usuario usuario = new Usuario(3,"nombre3","email3","password3",new Date(),new Date(),rol);
         
         try{
             filasAfectadas = usuarioDao.insertar(usuario);
