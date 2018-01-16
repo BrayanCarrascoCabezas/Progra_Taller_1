@@ -98,6 +98,8 @@ public class Etiqueta_publicacionImpl implements IEtiqueta_publicacion{
             if(con!=null)
             con.desconectar();
         }
+        
         return etiqueta_publicacion;
+        
     }  
 }
